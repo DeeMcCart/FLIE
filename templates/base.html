@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Financial Literacy Resources, Ireland, digital literacy, literacy">
         
-        <meta property="og:title" content="DLIE | Financial Literacy Ireland">
+        <meta property="og:title" content="FLIE | Financial Literacy Ireland">
         <meta property="og:description" content="Financial Literacy Resources for Republic of Ireland residents">
         <meta property="og:url" content="{{ request.build_absolute_uri }}">
          <!--Favicon-->
@@ -63,8 +63,9 @@
     
     {% block extra_js %}
     {% endblock %}
+
     
-    <title>Goldmark Jewellers | Carlow Town
+    <title>Financial Literacy Resources | Ireland
         {% block extra_title %}
         {% endblock %}
     </title>
@@ -76,57 +77,37 @@
   <body>
     <header class="container-fluid fixed-top">
         <!-- display of this section only if large screen-->    
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <!-- responsive logo display -->
-            <div id="logo" class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">
-                        <img class="logo" src="{% static 'images/logo.png' %}" alt="Jeweller business logo" >
-                        <strong class="fst-italic">Goldmark</strong>Jewellers
-                    </h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}" >
+                    <img class="logo" src="{% static 'images/logo.png' %}" alt="FLIER business logo" >
+                    <strong class="fst-italic">Financial Literacy</strong> Ireland
                 </a>
-            </div> <!-- end div logo -->
-
-            <!-- search-the-site function displays as large field on bigger screens, --> 
-            <!-- and as icon with drop-down menu on smaller screens -->
-            <div id="search-field" class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <!-- search form -->
-                 
-            </div> <!-- end div search-field -->
-
-            <!-- navbar links -->
-            <!-- search field display, this diplays only on L and XL screens  -->    
-            <div id="navbar-links" class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <!-- Responsivenes: display the profile and grand total within this ul on large and XL screens -->
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    {% include 'includes/nav-profile.html' %}
-                    <!-- if basket exists, show total -->
-                    {% include 'includes/nav-grand-total.html' %}
-                </ul>   <!-- end ul of navbar items-->
-            </div> <!-- end div id=navbar-links -->
-        </div> <!-- end div id = topnav class="row bg-white pt-lg-2 d-none d-lg-flex" -->
-
-        <!-- New row for the secondary header (category searches) -->
-        <div class="row bg-white">
-            <!-- DMcC 21/02/24 apply ul rather than navbar -->
-            <div class="navbar navbar-expand-lg navbar-light w-100"> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
-                    <!-- nav-mobile reduces the searchbar display to an icon with drop-down rather than full field width for XS S M screens-->
-                    {% include 'includes/mobile-top-header.html' %}
-                    <!-- nav-secondary shows a secondary navbar which is used to offer/apply filters on products displayed -->
-                    {% include 'includes/nav-main.html' %}
-                
-            </div>
-        </div> <!-- end div row -->
-        <!-- delivery threshold banner -->
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1" id="banner-message">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>                
-            </div>            
-        </div> <!-- end div delivery-banner class="row text-center"-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home 
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div> <!-- end div collapse navbar-collapse-->
+            </div> <!-- end div container-fluid-->
+        </nav> 
+           
     </header>
 
     {% if messages %}
