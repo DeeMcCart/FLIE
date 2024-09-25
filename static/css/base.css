@@ -7,6 +7,7 @@
     --color-red: #E84610;
     --color-blue: blue;
     --color-green: green;
+    --color-lightgreen: rgb(127, 234, 127);
     --color-danger: #dc3545;
     --color-card-background: #ede9e9;
     --color-card-border: #dddcdc;
@@ -33,7 +34,20 @@ body
 }
 
 .jumbotron, .jumbotron-fluid {
-    background: url("../images/financial-literacy.png") repeat center;
+    /* background: url("../images/financial-literacy.png") repeat center; */
+    background-color: rgb(188, 235, 188)
+}
+
+#goals {
+    background-color: lightblue;
+}
+
+#about {
+    background-color: lightyellow;
+}
+
+#stats {
+    background-color: lightgreen;
 }
 
 .btn-primary {
@@ -48,6 +62,7 @@ body
 }
 #contact {
     background: url("contact.jpg") no-repeat center;
+    background-color: rgb(240, 197, 118);
 }
 
 .allauth-listyle {
