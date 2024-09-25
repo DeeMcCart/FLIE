@@ -53,7 +53,7 @@
     
     <script src="https://kit.fontawesome.com/a5acd5b07c.js" crossorigin="anonymous"></script>
      <!-- Stripe -->
-     <script src="https://js.stripe.com/v3/"></script>
+     <script src="https://js.stripe.com/v3/"></script> 
 
      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   
@@ -106,15 +106,6 @@
         </div> <!-- end div container-fluid-->
     </nav> 
     
-    <header class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center"> 
-           <h1 class="display-3">Financial and Digital Resources</h1>
-           <p class="lead pb-4">Resources, provided by the finance and advocacy sectors, to faciliate 
-            access to knowledge and skills allowing people in Ireland to expand their financial and digital knowledge 
-            through all available channels.</p>
-           <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn More</a></p>
-        </div>
-    </header>
 
     {% if messages %}
     <div class="message-container" id="msg">
@@ -139,12 +130,11 @@
 
     
     {% block content %}
-    {% endblock %}
+     {% endblock %}
     
     <div class="footer-container">
         {% include 'includes/footer.html' %}
     </div>
-    
     
     
     {% block postloadjs %}
