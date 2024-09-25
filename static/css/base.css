@@ -32,6 +32,16 @@ body
     /* filter: grayscale(0.7); */
 }
 
+.jumbotron, .jumbotron-fluid {
+    background: url("../images/financial-literacy.png") repeat center;
+}
+
+.btn-primary {
+    background-color: #c60063;
+    border-color: #c60063;
+}
+
+
 .allauth-listyle {
     background-color: var(--color-background);
     /* DMcC 18/08/24 Try font family INTER rather than Lato */
