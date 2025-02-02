@@ -75,7 +75,9 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-deemccart-flie-mn5ed8ya7u0.ws-eu116.gitpod.io',
 ]
 ALLOWED_HOSTS = ['8000-deemccart-flie-mn5ed8ya7u0.ws-eu116.gitpod.io',
-    ]
+                'https://8000-deemccart-flie-tz1cfb1sy6o.ws-eu117.gitpod.io/',
+                '8000-deemccart-flie-tz1cfb1sy6o.ws-eu117.gitpod.io',
+                ]
 
 
 # Application definition
